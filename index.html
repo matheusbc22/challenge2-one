@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Challenge - Sprint 02</title>
+</head>
+<body>
+    <main>
+        <section class="row" id="logo">
+            <img width="31" height="48" src="img/logo.svg" alt="Logo da alura">
+        </section>
+        <section id="jogo">
+            <div id="menuAdd">
+                <div class="row">
+                    <input type="text" id="input" placeholder="Digite a sua palavra" aria-placeholder="Digite a sua palavra">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button id="salvar">Salvar</button>
+
+                        
+                    </div>
+                    <div class="col">
+                        <button id="voltar">Voltar</button>   
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="double-column" id="container">
+
+                    <div class="row">
+                            <div class="col">
+                                <canvas id="forca" width="800" height="600">O seu navegador não suporta HTML5!</canvas>
+                            </div>
+                    </div>
+                    <div class="row">
+                        <button id="btnNewGame">Novo jogo</button>
+                        <button id="btnQuit">Desistir</button>
+                    </div>
+
+                    <div class="row"><button id="btnStart">Iniciar jogo</button></div>
+                    <div class="row"><button id="btnAdd">Adicionar palavra</button></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>Criado por: <a href="https://www.linkedin.com/in/matheusbc22/">Matheus</a> - 2022</footer>
+    <script src="js/index.js" type="text/javascript"></script>
+</body>
+</html>
