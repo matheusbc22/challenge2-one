@@ -18,8 +18,8 @@ var tentativas = 6;
 var parteForca = 0;
 var jogoInicial = true;
 var acertos = 0;
+var acertado = [];
 
-console.log(arrayDePalavras);
 function salvarPalavra(){
     if (palavra.value.length <= 10){
         let valorPalavra = palavra.value.toUpperCase();
@@ -174,7 +174,10 @@ function aguardarTentativa(e){
             letraMaiuscula = letraPresionada.toUpperCase();
             if (letraPresionada.length === 1 && letraMaiuscula.match(/^[A-ZÇ ]+$/)){
                 if (palavraEscolhida.indexOf(letraMaiuscula) >= 0){
-                    escreverLetra(letraMaiuscula, true);
+                    if (acertado.indexOf(letraMaiuscula) < 0){
+                        acertado.push(letraMaiuscula);
+                        escreverLetra(letraMaiuscula, true);
+                    }                    
                 }else{
                     escreverLetra(letraMaiuscula, false);
                 }
@@ -223,6 +226,7 @@ function desenhaTracos(tamanho){
     tentativas = 6;
     parteForca = 0;
     acertos = 0;
+    acertado = [];
     xPalavra = 0;
     yErrado = 480;
     xErrado = 180;
